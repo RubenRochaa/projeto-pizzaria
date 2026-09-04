@@ -3,9 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
-  "type": "module",
   "scripts": {
-    "dev": "ts-node-dev --transpile-only src/server.js"
+    "dev": "ts-node-dev --transpile-only src/server.ts"
   },
   "devDependencies": {
     "@types/bcryptjs": "^3.0.0",
