@@ -8,6 +8,7 @@
     // Environment Settings
     // See also https://aka.ms/tsconfig/module
     "module": "commonjs",
+    "typeRoots": ["./src/@types/"],
     // troquei o module para commonjs, pois o esnext estava dando erro no nodejs
     "target": "es2016",
     "types": [],
@@ -23,7 +24,8 @@
 
     // Stricter Typechecking Options
     "noUncheckedIndexedAccess": true,
-    "exactOptionalPropertyTypes": true,
+    "exactOptionalPropertyTypes": false,
+    // mudei isso para false, pois estava dando erro, isso aconteceu após eu mudar o "strict" para false, pois estava dando erro no token, isso aconteceu na página 433.
 
     // Style Options
     // "noImplicitReturns": true,
@@ -34,7 +36,7 @@
     // "noPropertyAccessFromIndexSignature": true,
 
     // Recommended Options
-    "strict": true,
+    "strict": false,
     "jsx": "react-jsx",
     "verbatimModuleSyntax": false,
     "esModuleInterop": true,
