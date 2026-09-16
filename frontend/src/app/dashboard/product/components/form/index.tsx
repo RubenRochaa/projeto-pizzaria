@@ -46,16 +46,17 @@ export function Form({ categories }: Props ){
 
     const token = getCookieClient();
 
-    await api.post("/product", data, {
-        headers:{
-            Authorization: `Bearer ${token}`
-        }
-    })
-    .catch((err) => {
+    try {
+        await api.post("/product", data, {
+            headers:{
+                Authorization: `Bearer ${token}`
+            }
+        })
+    } catch (err) {
         console.log(err);
         toast.warning("Falha ao Cadastrar este Produto")
         return;
-    })
+    }
 
     toast.success("Produto Registrado com Sucesso")
     router.push("/dashboard")
